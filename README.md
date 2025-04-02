@@ -69,6 +69,45 @@ php artisan vendor:publish --tag="redsys-config"
 ```
 >Esto nos creará un archivo llamado *redsys.php* dentro de config, en este archivo debemos configurar nuestra key, url ok y ko.
 
+## Instalación del fork para Laravel 12 (Juan A. Doval)
+
+Si estás usando Laravel 12 y tienes problemas con la instalación del paquete original, puedes utilizar este fork que está adaptado específicamente para Laravel 12. Sigue estos pasos:
+
+1. Agrega el repositorio a tu archivo `composer.json`:
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/dovaldev/redsys-laravel"
+    }
+]
+```
+
+2. Añade la dependencia en tu sección `require`:
+
+```json
+"require": {
+    "php": "^8.2",
+    "laravel/framework": "^12.0",
+    "ssheduardo/redsys-laravel": "dev-master as 1.4.7"
+}
+```
+
+3. Ejecuta el comando para actualizar las dependencias:
+
+```bash
+composer update ssheduardo/redsys-laravel
+```
+
+4. Publica el archivo de configuración:
+
+```bash
+php artisan vendor:publish --tag="redsys-config"
+```
+
+> Nota: Este fork utiliza la rama `master`. Si tu entorno usa `sail` u otro sistema de contenedorización, asegúrate de ejecutar los comandos de composer dentro del entorno correcto, por ejemplo: `sail composer update ssheduardo/redsys-laravel`
+
 ## Uso
 Imaginemos que tenemos esta ruta http://ubublog.com/redsys que enlaza con **RedsysController@index**
 

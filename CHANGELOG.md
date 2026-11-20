@@ -2,10 +2,17 @@
 
 All Notable changes to `Redsys` will be documented in this file
 
-## 1.4.7 (2025-04-02)
+## 1.5.0 (2026-03-21)
 
 ### Added
-- Added support for Laravel 12
+- Laravel 13 compatibility
+- PHPUnit configuration for package testing
+- Composer script for running package tests
+
+## 1.4.7 (2025-05-09)
+
+### Added
+- Laravel 12 support and updated installation instructions
 
 ## 1.4.6 (2024-05-02)
 
